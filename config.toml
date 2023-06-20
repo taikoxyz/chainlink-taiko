@@ -10,9 +10,9 @@ SecureCookies = false
 HTTPSPort = 0
 
 [[EVM]]
-ChainID = '2828'
+ChainID = '167005'
 
 [[EVM.Nodes]]
-Name = 'Lukso'
-WSURL = 'wss://ws-rpc.testnet.lukso.network'
-HTTPURL = 'https://rpc.testnet.lukso.network'
+Name = 'Taiko'
+WSURL = 'wss://ws.test.taiko.xyz'
+HTTPURL = 'https://rpc.test.taiko.xyz'
