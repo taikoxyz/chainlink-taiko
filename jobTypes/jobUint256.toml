@@ -1,7 +1,7 @@
 name = "Get > Uint256 - (TOML)"
 schemaVersion = 1
 type = "directrequest"
-contractAddress = "0x0000000000000000000000000000000000000000" # Operator.sol contract address.
+contractAddress = "0x7053af6475b2a11Bff65E697E349d66e6580d371" # Operator.sol contract address.
 maxTaskDuration = "0s"
 minIncomingConfirmations = 0
 observationSource = """
@@ -21,7 +21,7 @@ observationSource = """
                   abi="fulfillOracleRequest2(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes calldata data)"
                   data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\":   $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
                   ]
-    submit_tx    [type="ethtx" to="0x8FDDf2Fe177d16C2783b1F52dc71ABbc4366977B" data="$(encode_tx)"]
+    submit_tx    [type="ethtx" to="0x7053af6475b2a11Bff65E697E349d66e6580d371" data="$(encode_tx)"]
 
     decode_log -> decode_cbor -> fetch -> parse -> multiply -> encode_data -> encode_tx -> submit_tx
 """
