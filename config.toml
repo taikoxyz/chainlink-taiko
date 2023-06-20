@@ -1,0 +1,18 @@
+RootDir = '~/chainlink'
+[Log]
+Level = 'warn'
+
+[WebServer]
+AllowOrigins = '\*'
+SecureCookies = false
+
+[WebServer.TLS]
+HTTPSPort = 0
+
+[[EVM]]
+ChainID = '2828'
+
+[[EVM.Nodes]]
+Name = 'Lukso'
+WSURL = 'wss://ws-rpc.testnet.lukso.network'
+HTTPURL = 'https://rpc.testnet.lukso.network'
