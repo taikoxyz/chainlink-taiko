@@ -1,18 +1,18 @@
-# LuksOracle
+# chainlink-taiko
 
-Chainlink oracle on Lukso blockchain which supports API uint256 GET requests.
+Chainlink oracle on Taiko Alpha 3 blockchain which supports API uint256 GET requests.
 
-## Starting the Chainlink node on Lukso with WSS RPC URL:
+## Starting the Chainlink node on Taiko with WSS RPC URL:
 
 1. Clone this repository.
 ```shell
-git clone git@github.com:LuksOracle/chainlink-lukso.git
+git clone git@github.com:taikoxyz/chainlink-taiko.git
 ```
 2. Start PostgreSQL server instance with Docker
 
 Enter directory
 ```shell
-cd chainlink-lukso 
+cd chainlink-taiko 
 ```
 Create docker instance with password
 ```shell
@@ -22,7 +22,7 @@ sudo docker run --name cl-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432
 
 Start Chainlink Node after PostgreSQL server is running (modify config.toml if you wish to modify network parameters)
 ```shell
-sudo docker run --platform linux/x86_64/v8 --name chainlink -v $HOME/chainlink-lukso:/chainlink -it -p 6688:6688 --add-host=host.docker.internal:host-gateway smartcontract/chainlink:2.2.0 node -config /chainlink/config.toml -secrets /chainlink/secrets.toml start
+sudo docker run --platform linux/x86_64/v8 --name chainlink -v $HOME/chainlink-taiko:/chainlink -it -p 6688:6688 --add-host=host.docker.internal:host-gateway smartcontract/chainlink:2.2.0 node -config /chainlink/config.toml -secrets /chainlink/secrets.toml start
 ```
 :warning: Make sure you also install PostgreSQL: :warning:
 
