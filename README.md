@@ -38,11 +38,8 @@ sudo lsof -i tcp:5432
 ```shell
 sudo kill 25537
 ```
-:warning: Note: if there is an issue with your node, run the following (will wipe Docker and PostgreSQL files for a clean node): :warning:
-```shell
-sudo docker rm -vf $(sudo docker ps -aq)
-sudo docker rmi -f $(sudo docker images -q)
-```
+:warning: Note: if there is an issue with your Chainlink node, try deleting the docker Chainlink node's image and containers.
+
 4. Interact with Chainlink node GUI in web browser URL:
 
 http://localhost:6688/
