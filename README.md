@@ -38,7 +38,7 @@ sudo lsof -i tcp:5432
 ```shell
 sudo kill 25537
 ```
-:warning: Note: if there is an issue with your Chainlink node, try deleting the docker Chainlink node's image and containers.
+:warning: Note: if there is an issue with your Chainlink node, try deleting the docker Chainlink node's image and containers. ⚠️
 
 4. Interact with Chainlink node GUI in web browser URL:
 
